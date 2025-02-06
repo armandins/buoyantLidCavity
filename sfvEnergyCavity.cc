@@ -127,8 +127,7 @@ int main() {
                 double laplacianTheta   = (ThetaP[i + 1][j] + ThetaP[i - 1][j] + ThetaP[i][j + 1] + ThetaP[i][j - 1] - 4 * ThetaP[i][j]) / (h * h);
                 double ddyPsi = (Psi[i][j + 1] - Psi[i][j - 1]) / (2 * h);
                 double ddxPsi = (Psi[i + 1][j] - Psi[i - 1][j]) / (2 * h);
-                //Theta[i][j]             = ThetaP[i][j] - dt * (u[i][j] * ddxTheta + v[i][j] * ddyTheta) 
-                //                        + dt * (1.0 / Pe) * laplacianTheta;
+              
                 Theta[i][j] = ThetaP[i][j] + (-ddyPsi * ddxTheta + ddxPsi * ddyTheta + (1.0 / Pe) * laplacianTheta) * dt;
             }
         }
