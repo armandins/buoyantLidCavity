@@ -17,6 +17,12 @@ $$
 \frac{\partial \Theta}{\partial \tau} + U\frac{\partial \Theta}{\partial X} + V\frac{\partial \Theta}{\partial Y} = \frac{1}{Pe}(\frac{\partial^2\Theta}{\partial X^2} + \frac{\partial^2\Theta}{\partial Y^2})
 $$  
 
+Where
+
+$$
+\Theta = \frac{T - T_c}{T_h - T_c}
+$$
+
 Where $Ra = \frac{Gr}{Re^2}$ and $Pe = RePr$. Gr stands for Grashof number which is defined by: 
 $$
 Gr = \frac{g\beta L^3 (T_h - T_c)}{\nu ^2}
