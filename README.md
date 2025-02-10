@@ -18,4 +18,8 @@ $$
 $$  
 
 Where $Ra = \frac{Gr}{Re^2}$ and $Pe = RePr$. 
+![Alt text](images/theta.png)
+
+
+
 
