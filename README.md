@@ -20,10 +20,15 @@ $$
 Where $Ra = \frac{Gr}{Re^2}$ and $Pe = RePr$. 
 
 <div align="center">
-    <img src="images/theta.png" alt="Alt text" width="500" />
-    <p style="font-size: 14px; color: #555;">Re = 100 and Gr = 1000 Case</p>
+    <img src="images/thetaa.png" alt="Alt text" width="300" />
+    <p style="font-size: 14px; color: #555;">Temperature variations at Re = 100 and Gr = 1000 Case</p>
 </div>
 
+
+<div align="center">
+    <img src="images/sf.png" alt="Alt text" width="300" />
+    <p style="font-size: 14px; color: #555;">Stream functions at Re = 100 and Gr = 1000 Case</p>
+</div>
 
 
 
