@@ -27,6 +27,27 @@ $$
 \tau = \frac{t U_0}{l}
 $$
 
+$$
+X = \frac{x}{l}
+$$
+
+$$
+Y = \frac{y}{l}
+$$
+
+$$
+U = \frac{u}{u_0}
+$$
+
+$$
+V = \frac{v}{u_0}
+$$
+
+$$
+P = \frac{p}{\rho (u_0)^2}
+$$
+
+
 $Ra = \frac{Gr}{Re^2}$ and $Pe = RePr$. Gr stands for Grashof number which is defined by: 
 
 $$
