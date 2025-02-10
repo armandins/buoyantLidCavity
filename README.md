@@ -18,6 +18,8 @@ $$
 $$  
 
 Where $\Theta = \frac{T - T_c}{T_h - T_c}$ , $\tau = \frac{t U_0}{l}$ , $X = \frac{x}{l}$ , $Y = \frac{y}{l}$ , $U = \frac{u}{u_0}$ , $V= \frac{v}{u_0}$ and $P^{\star} = \frac{p}{\rho (u_0)^2}$. 
+Boundary conditions are $U = 1$ for top wall and $U = 0$ for the rest. $\Theta_l = 1$ or $T = T_h$ for left wall, $\Theta_r = 0$ or $T = T_c$ for right wall and bottom and top walls have zero gradient conditions. 
+
 
 $Ra = \frac{Gr}{Re^2}$ and $Pe = RePr$. Gr stands for Grashof number which is defined by: 
 
