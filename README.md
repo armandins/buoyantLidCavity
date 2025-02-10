@@ -18,7 +18,9 @@ $$
 $$  
 
 Where $Ra = \frac{Gr}{Re^2}$ and $Pe = RePr$. 
-![Alt text](images/theta.png)
+
+ 
+![Re = 100 and Gr = 1000 Theta](images/theta.png)
 
 
 
