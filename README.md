@@ -28,6 +28,7 @@ $$
 $$
 
 $Ra = \frac{Gr}{Re^2}$ and $Pe = RePr$. Gr stands for Grashof number which is defined by: 
+
 $$
 Gr = \frac{g\beta L^3 (T_h - T_c)}{\nu ^2}
 $$
