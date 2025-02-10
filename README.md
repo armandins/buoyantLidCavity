@@ -21,6 +21,9 @@ Where
 
 $$
 \Theta = \frac{T - T_c}{T_h - T_c} 
+$$
+
+$$
 \tau = \frac{t U_0}{l}
 $$
 
