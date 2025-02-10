@@ -54,18 +54,18 @@ void writeToVTK(const std::vector<double>& x, const std::vector<double>& y,
 // Different test cases are for Gr = 1000, 10000 and 100000 to be computed
 
 int main() {
-    int     Nx              { 129   };              // Number of grid points in x-dir
-    int     Ny              { 129   };              // Number of grid points in y-dir
-    int     maxIt           { 500000};              // Maximum iter. allowed
-    double  L               { 1.0   };              // Length of each wall
-    double  UWall           { 1.0   };              // Upper-wall velocity
-    double  dt              { 5e-05 };              // Timestep size
-    double  maxe            { 1e-7  };              // Max-error
-    double  Re              { 100   };              // Reynolds
-    double  Pr              { 0.70  };              // Prandtl
-    double  Gr              { 1000  };             // Grashof
-    double  Pe              { Re*Pr };              // Peclet
-    double  Ra              { Gr / (Re * Re)};      // Rayleigh
+    int     Nx              { 129           };              // Number of grid points in x-dir
+    int     Ny              { 129           };              // Number of grid points in y-dir
+    int     maxIt           { 600000        };              // Maximum iter. allowed
+    double  L               { 1.0           };              // Length of each wall
+    double  UWall           { 1.0           };              // Upper-wall velocity
+    double  dt              { 5E-05         };              // Timestep size
+    double  maxe            { 1E-7          };              // Max-error
+    double  Re              { 100           };              // Reynolds
+    double  Pr              { 0.70          };              // Prandtl
+    double  Gr              { 1E+3          };              // Grashof
+    double  Pe              { Re*Pr         };              // Peclet
+    double  Ra              { Gr / (Re * Re)};              // Rayleigh
 
 
     std::vector<std::vector<double>> Omega  (Nx, std::vector<double>(Ny, 0.0)); // Vorticity
@@ -97,19 +97,19 @@ int main() {
         // Boundary Conditions for Psi - Omega
         // ---------------------------------------------------------------------------
         for (int i = 0; i < Nx; ++i) {
-            Omega[i][Ny - 1] = -2 * Psi[i][Ny - 2] / (h * h) - UWall * 2 / h; // Top
-            Omega[i][0] = -2 * Psi[i][1] / (h * h); // Bottom
+            Omega[i][Ny - 1] = -2 * Psi[i][Ny - 2] / (h * h) - UWall * 2 / h;   // Top
+            Omega[i][0] = -2 * Psi[i][1] / (h * h);                             // Bottom
         }
         for (int j = 0; j < Ny; ++j) {
-            Omega[0][j] = -2 * Psi[1][j] / (h * h); // Left
-            Omega[Nx - 1][j] = -2 * Psi[Nx - 2][j] / (h * h); // Right
+            Omega[0][j] = -2 * Psi[1][j] / (h * h);                             // Left
+            Omega[Nx - 1][j] = -2 * Psi[Nx - 2][j] / (h * h);                   // Right
         }
         //-------------------------------------------------------------------------------
         // Boundary Conditions for Theta
         //-------------------------------------------------------------------------------
         for (int j = 0; j < Ny; ++j) {
-            Theta[0][j] = 1.0;      // Left wall (Hot)
-            Theta[Nx-1][j] = 0.0;   // Right wall (Cold)
+            Theta[0][j] = 1.0;                  // Left wall (Hot)
+            Theta[Nx-1][j] = 0.0;               // Right wall (Cold)
         }
         for (int i = 0; i < Nx; ++i) {
             Theta[i][0] = Theta[i][1];          // Bottom wall (Zero gradient)
@@ -127,7 +127,7 @@ int main() {
                 double laplacianTheta   = (ThetaP[i + 1][j] + ThetaP[i - 1][j] + ThetaP[i][j + 1] + ThetaP[i][j - 1] - 4 * ThetaP[i][j]) / (h * h);
                 double ddyPsi = (Psi[i][j + 1] - Psi[i][j - 1]) / (2 * h);
                 double ddxPsi = (Psi[i + 1][j] - Psi[i - 1][j]) / (2 * h);
-              
+
                 Theta[i][j] = ThetaP[i][j] + (-ddyPsi * ddxTheta + ddxPsi * ddyTheta + (1.0 / Pe) * laplacianTheta) * dt;
             }
         }
@@ -139,13 +139,13 @@ int main() {
         OmegaP = Omega;
         for (int i = 1; i < Nx - 1; ++i) {
             for (int j = 1; j < Ny - 1; ++j) {
-                double ddxTheta = (ThetaP[i + 1][j] - ThetaP[i - 1][j]) / (2 * h);
-                double ddyPsi = (Psi[i][j + 1] - Psi[i][j - 1]) / (2 * h);
-                double ddxOmegaP = (OmegaP[i + 1][j] - OmegaP[i - 1][j]) / (2 * h);
-                double ddxPsi = (Psi[i + 1][j] - Psi[i - 1][j]) / (2 * h);
-                double ddyOmegaP = (OmegaP[i][j + 1] - OmegaP[i][j - 1]) / (2 * h);
-                double laplacianOmegaP = (OmegaP[i + 1][j] + OmegaP[i - 1][j] + OmegaP[i][j + 1] + OmegaP[i][j - 1] - 4 * OmegaP[i][j]) / (h * h);
-                double buoyancyTerm = Ra * ddxTheta; 
+                double ddxTheta         = (ThetaP[i + 1][j] - ThetaP[i - 1][j]) / (2 * h);
+                double ddyPsi           = (Psi[i][j + 1] - Psi[i][j - 1]) / (2 * h);
+                double ddxOmegaP        = (OmegaP[i + 1][j] - OmegaP[i - 1][j]) / (2 * h);
+                double ddxPsi           = (Psi[i + 1][j] - Psi[i - 1][j]) / (2 * h);
+                double ddyOmegaP        = (OmegaP[i][j + 1] - OmegaP[i][j - 1]) / (2 * h);
+                double laplacianOmegaP  = (OmegaP[i + 1][j] + OmegaP[i - 1][j] + OmegaP[i][j + 1] + OmegaP[i][j - 1] - 4 * OmegaP[i][j]) / (h * h);
+                double buoyancyTerm     = Ra * ddxTheta; 
 
                 Omega[i][j] = OmegaP[i][j] - dt * (ddyPsi * ddxOmegaP - ddxPsi * ddyOmegaP) 
                             + dt * (1.0 / Re) * laplacianOmegaP 
@@ -198,7 +198,7 @@ int main() {
     //----------------------------------------------------------------------------
     // Call VTK Writer
     //----------------------------------------------------------------------------
-    writeToVTK(x, y, u, v, Psi, Omega, Theta, "Gr1000cavityResults.vtk");
+    writeToVTK(x, y, u, v, Psi, Omega, Theta, "Gr1000Re100cavityResults.vtk");
     return 0;
 }
 
