@@ -37,6 +37,11 @@ $$
 $$
 Pr = \frac{\nu}{\alpha}
 $$ 
+ 
+The results are written to a .VTK format and can be post-processed via Paraview. To run the code simply use: 
+```
+g++ -ggdb3 -O1 -std=c++23 -Wall -Wextra -pedantic -o sfvEnergyCavity.out sfvEnergyCavity.cc
+```
 
 <div align="center">
     <img src="images/thetaa.png" alt="Alt text" width="300" />
