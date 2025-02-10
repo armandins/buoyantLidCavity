@@ -23,9 +23,6 @@ Where $Ra = \frac{Gr}{Re^2}$ and $Pe = RePr$.
     <img src="images/theta.png" alt="Alt text" width="500" />
 </div>
 
- 
-![Re = 100 and Gr = 1000 Theta](images/theta.png)
-
 
 
 
