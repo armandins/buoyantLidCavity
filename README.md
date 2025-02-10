@@ -17,7 +17,15 @@ $$
 \frac{\partial \Theta}{\partial \tau} + U\frac{\partial \Theta}{\partial X} + V\frac{\partial \Theta}{\partial Y} = \frac{1}{Pe}(\frac{\partial^2\Theta}{\partial X^2} + \frac{\partial^2\Theta}{\partial Y^2})
 $$  
 
-Where $Ra = \frac{Gr}{Re^2}$ and $Pe = RePr$. 
+Where $Ra = \frac{Gr}{Re^2}$ and $Pe = RePr$. Gr stands for Grashof number which is defined by: 
+$$
+Gr = \frac{g\beta L^3 (T_h - T_c)}{\nu ^2}
+$$
+Also for Reynolds number and Prandtl we have the definitions stated below: 
+$$
+Re = \frac{U_0 L}{\nu}
+Pr = \frac{\nu}{\alpha}
+$$
 
 <div align="center">
     <img src="images/thetaa.png" alt="Alt text" width="300" />
