@@ -20,10 +20,11 @@ $$
 Where
 
 $$
-\Theta = \frac{T - T_c}{T_h - T_c}
+\Theta = \frac{T - T_c}{T_h - T_c} 
+\tau = \frac{t U_0}{l}
 $$
 
-Where $Ra = \frac{Gr}{Re^2}$ and $Pe = RePr$. Gr stands for Grashof number which is defined by: 
+$Ra = \frac{Gr}{Re^2}$ and $Pe = RePr$. Gr stands for Grashof number which is defined by: 
 $$
 Gr = \frac{g\beta L^3 (T_h - T_c)}{\nu ^2}
 $$
