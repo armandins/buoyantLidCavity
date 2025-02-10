@@ -21,11 +21,15 @@ Where $Ra = \frac{Gr}{Re^2}$ and $Pe = RePr$. Gr stands for Grashof number which
 $$
 Gr = \frac{g\beta L^3 (T_h - T_c)}{\nu ^2}
 $$
+
 Also for Reynolds number and Prandtl we have the definitions stated below: 
+
 $$
 Re = \frac{U_0 L}{\nu}
-Pr = \frac{\nu}{\alpha}
+$$ 
 $$
+Pr = \frac{\nu}{\alpha}
+$$ 
 
 <div align="center">
     <img src="images/thetaa.png" alt="Alt text" width="300" />
