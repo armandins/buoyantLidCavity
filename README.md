@@ -15,4 +15,7 @@ $$
 
 $$
 \frac{\partial \Theta}{\partial \tau} + U\frac{\partial \Theta}{\partial X} + V\frac{\partial \Theta}{\partial Y} = \frac{1}{Pe}(\frac{\partial^2\Theta}{\partial X^2} + \frac{\partial^2\Theta}{\partial Y^2})
-$$
+$$  
+
+Where $Ra = \frac{Gr}{Re^2}$ and $Pe = RePr$. 
+
