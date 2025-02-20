@@ -10,7 +10,7 @@ $$
 $$
 
 $$
-\frac{\partial V}{\partial \tau} + U\frac{\partial V}{\partial X} + V\frac{\partial V}{\partial Y} = -\frac{\partial P^\star}{\partial Y} + \frac{1}{Re}(\frac{\partial^2V}{\partial X^2} + \frac{\partial^2 V}{\partial Y^2}) + Ra\Theta
+\frac{\partial V}{\partial \tau} + U\frac{\partial V}{\partial X} + V\frac{\partial V}{\partial Y} = -\frac{\partial P^\star}{\partial Y} + \frac{1}{Re}(\frac{\partial^2V}{\partial X^2} + \frac{\partial^2 V}{\partial Y^2}) + Ri\Theta
 $$
 
 $$
@@ -23,7 +23,7 @@ Boundary conditions are $U = 1$ for top wall and $U = 0$ for the rest. $\Theta_l
 
 ## Results
 
-$Ra = \frac{Gr}{Re^2}$ and $Pe = RePr$. Gr stands for Grashof number which is defined by: 
+$Ri = \frac{Gr}{Re^2}$ and $Pe = RePr$. Gr stands for Grashof number which is defined by: 
 
 $$
 Gr = \frac{g\beta L^3 (T_h - T_c)}{\nu ^2}
