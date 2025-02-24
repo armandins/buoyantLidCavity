@@ -13,15 +13,12 @@ OPT_LEVEL="-O$1"
 # Output executable name
 EXECUTABLE="main.out"
 
-# Compile the C++ program with the specified optimization level
 g++ -ggdb3 $OPT_LEVEL -std=c++23 -Wall -Wextra -pedantic -o $EXECUTABLE main.cc
 
 # Check if compilation was successful
 if [ $? -eq 0 ]; then
     echo "Compilation successful! Optimization level: $OPT_LEVEL"
     echo "Executable: ./$EXECUTABLE"
-
-    # Run the executable
     echo "Running $EXECUTABLE..."
     time ./$EXECUTABLE
 else
